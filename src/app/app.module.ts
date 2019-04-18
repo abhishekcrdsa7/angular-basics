@@ -8,6 +8,8 @@ import { SuccessAlert } from './successAlert/successAlert.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { Highlight } from './highlight.directive';
+import { Cond } from './condition.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EvenComponent } from './even/even.component';
     SuccessAlert,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    Highlight,
+    Cond
   ],
   imports: [
     BrowserModule,

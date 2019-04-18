@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'my-first-app';
   even: number[] = [];
   odd: number[] = [];
+  show: boolean = true;
   // username:String = '';
   // displayDetail:boolean = false;
   // forArray = [];
@@ -26,12 +27,12 @@ export class AppComponent {
   //   this.index++;
   // }
 
-  tellChildren(incNum: number){
-    console.log(incNum);
-    if(incNum%2 == 0){
-      this.even.push(incNum);
-    }else{
-      this.odd.push(incNum);
-    }
-  }
+  // tellChildren(incNum: number){
+  //   console.log(incNum);
+  //   if(incNum%2 == 0){
+  //     this.even.push(incNum);
+  //   }else{
+  //     this.odd.push(incNum);
+  //   }
+  // }
 }

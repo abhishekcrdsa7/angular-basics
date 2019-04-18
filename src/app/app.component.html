@@ -8,9 +8,13 @@
 <p *ngFor="let ele of forArray, let i = index" [ngClass]="{goGreen: i >= 4}" [ngStyle]="{color: i >= 4 ? 'white' : 'black'}">{{forArray[0]}}</p> -->
 
 
-<app-game-control (startGame) = "tellChildren($event)"></app-game-control>
+<!-- <app-game-control (startGame) = "tellChildren($event)"></app-game-control>
 
 <div class="row">
   <app-even *ngFor="let e of even" [num]="e"></app-even>
   <app-odd *ngFor="let o of odd" [num]="o"></app-odd>
-</div>
+</div> -->
+
+<button (click)="show = !show">Click</button>
+
+<p *appUnless="show">This is para about to change..</p>
