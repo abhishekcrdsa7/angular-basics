@@ -3,6 +3,14 @@
 <!-- <input type="text" [(ngModel)]='username'>
 <p>{{ username }}</p>
 <button [disabled]="!username" (click)="onButtonClick()" class="btn btn-primary">Click Me!!</button> -->
-<button (click)="displayDetails()">Display Details</button>
+<!-- <button (click)="displayDetails()">Display Details</button>
 <p *ngIf="displayDetail">The secret details are: I am 5 feet 11 inches tall!</p>
-<p *ngFor="let ele of forArray, let i = index" [ngClass]="{goGreen: i >= 4}" [ngStyle]="{color: i >= 4 ? 'white' : 'black'}">{{forArray[0]}}</p>
+<p *ngFor="let ele of forArray, let i = index" [ngClass]="{goGreen: i >= 4}" [ngStyle]="{color: i >= 4 ? 'white' : 'black'}">{{forArray[0]}}</p> -->
+
+
+<app-game-control (startGame) = "tellChildren($event)"></app-game-control>
+
+<div class="row">
+  <app-even *ngFor="let e of even" [num]="e"></app-even>
+  <app-odd *ngFor="let o of odd" [num]="o"></app-odd>
+</div>

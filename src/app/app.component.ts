@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EvenComponent } from './even/even.component';
+import { OddComponent } from './odd/odd.component';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +9,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
-  username:String = '';
-  displayDetail:boolean = false;
-  forArray = [];
-  index:number = -1;
+  even: number[] = [];
+  odd: number[] = [];
+  // username:String = '';
+  // displayDetail:boolean = false;
+  // forArray = [];
+  // index:number = -1;
+  //
+  // onButtonClick(){
+  //   this.username = '';
+  // }
+  //
+  // displayDetails(){
+  //   this.forArray.push('The button was clicked.');
+  //   this.displayDetail = !this.displayDetail;
+  //   this.index++;
+  // }
 
-  onButtonClick(){
-    this.username = '';
-  }
-
-  displayDetails(){
-    this.forArray.push('The button was clicked.');
-    this.displayDetail = !this.displayDetail;
-    this.index++;
+  tellChildren(incNum: number){
+    console.log(incNum);
+    if(incNum%2 == 0){
+      this.even.push(incNum);
+    }else{
+      this.odd.push(incNum);
+    }
   }
 }
