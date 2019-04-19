@@ -15,6 +15,11 @@
   <app-odd *ngFor="let o of odd" [num]="o"></app-odd>
 </div> -->
 
-<button (click)="show = !show">Click</button>
+<button (click)="logc()">Click</button>
 
 <p *appUnless="show">This is para about to change..</p>
+
+<div [ngSwitch]="10">
+  <p *ngSwitchCase="5">This is 5.</p>
+  <p *ngSwitchCase="10">This is 10.</p>
+</div>
